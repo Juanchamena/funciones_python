@@ -12,13 +12,21 @@
 # --------------------------------
 # Aquí copiar la función "generar_invitados"
 # ya elaborada
+def generar_invitados():
+    invitados = []
+    for i in range(3):
+      invitado = input("Ingresar invitado: ")
+      invitados.append(invitado)
 
+    return invitados
 # --------------------------------
 
 # --------------------------------
 # Aquí copiar la función "ordenar"
 # ya elaborada
-
+def ordenar(lista):
+    lista_ordenada = sorted(lista)
+    return lista_ordenada
 # --------------------------------
 
 if __name__ == '__main__':
@@ -29,20 +37,17 @@ if __name__ == '__main__':
     # Deberá copiarlas fuera del bucle "__main__" como se detalla
     # al comienzo del archivo
     # --> El objetivo es generar una lista de invitados y ordenala
-
-    # Luego de copiar las funciones, invocarla en este lugar:
-
+    # Luego de copiar las funciones, invocarla en este lugar: 
     # 1) Primero generar una lista de invitados con "generar_invitados"
     #    Almacenar el resultado en "lista_invitados"
-
     # lista_invitados = generar_invitados()
-
     # 2) Luego ordenar la lista de invitados con "ordenar"
     #    --> Pasar como parámetro la "lista_invitados"
-    #    --> Retornar la lista de invitados ordenada
+    #    --> Retornar la lista de invitados ordenada  
 
-    # lista_invidatos_ordenada = ordenar(lista_invitados)
+    lista_invitados = generar_invitados()    
 
-    # Imprimir en pantalla "lista_invidatos_ordenada":
+    lista_ordenada = ordenar(lista_invitados)
 
-    print("terminamos")
+    print("La lista de invitados ingresada es:", lista_invitados)
+    print("La lista de invitados ordenada quedaría de la siguiente forma:", lista_ordenada)
